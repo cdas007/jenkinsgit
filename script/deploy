@@ -1,9 +1,9 @@
 #!/bin/sh
  
-ssh app@198.199.81.72 <<EOF
+ssh -tt app@198.199.81.72 <<EOF
   cd ~/jenkinsgit
   git pull
   npm install --production
-  forever restartall
+  npm install forever restartall
   exit
 EOF
